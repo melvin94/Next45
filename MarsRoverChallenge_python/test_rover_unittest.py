@@ -57,6 +57,10 @@ class TestRover(unittest.TestCase):
 		result = self.testRover.readInput(os.path.join(self.inputDirectory,"input8.txt"))
 		self.assertEqual(result, "9 4 N")
 
+	# test case: out of bounds before final coordinate
+	def test_9_out_of_bounds_vertical_boundary(self):
+		result = self.testRover.readInput(os.path.join(self.inputDirectory,"input9.txt"))
+		self.assertEqual(result, "9 4 N")
 
 if __name__ == "__main__":
 	unittest.main()

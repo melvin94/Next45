@@ -44,15 +44,15 @@ class Rover():
 			else:
 				self.rotate(roverInstruction)
 
-		if (self.__horizontalCoordinate < 0) \
-			or (self.__horizontalCoordinate > self.__horizontalBoundary) \
-			or (self.__verticalCoordinate < 0) \
-			or (self.__verticalCoordinate > self.__verticalBoundary):
-				print ("Rover will be placed out of bounds; not executing movement")
-				self.__horizontalCoordinate = initialHorizontalCoordinate
-				self.__verticalCoordinate = initialVerticalCoordinate
-				self.__orientation = initialRoverOrientation
-
+			if (self.__horizontalCoordinate < 0) \
+				or (self.__horizontalCoordinate > self.__horizontalBoundary) \
+				or (self.__verticalCoordinate < 0) \
+				or (self.__verticalCoordinate > self.__verticalBoundary):
+					print ("Rover will be placed out of bounds; not executing movement")
+					self.__horizontalCoordinate = initialHorizontalCoordinate
+					self.__verticalCoordinate = initialVerticalCoordinate
+					self.__orientation = initialRoverOrientation
+					break
 
 	def move(self):
 		if (self.__orientation == "N"):
