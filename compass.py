@@ -46,27 +46,21 @@ class Compass:
             if self.__orientations[orientation_index] == orientation:
                 self.__orientation_index == orientation_index
 
-    def __get_orientation(self) -> str:
+    def get_orientation(self) -> str:
         """Gets the compass orientation."""
 
         return self.__orientations[self.__orientation_index]
 
     def turn_right(self) -> str:
-        """Rotates the compass towards the next clockwise orientation and
-        returns the updated compass orientation."""
+        """Rotates the compass towards the next clockwise orientation."""
 
         self.__orientation_index += 1
         if self.__orientation_index >= len(self.__orientations):
             self.__orientation_index = 0
 
-        return self.__get_orientation()
-
     def turn_left(self) -> str:
-        """Rotates the compass towards the next anti-clockwise orientation and
-        returns the updated compass orientation."""
+        """Rotates the compass towards the next anti-clockwise orientation."""
 
         self.__orientation_index -= 1
         if self.__orientation_index < 0:
             self.__orientation_index = len(self.__orientations) - 1
-
-        return self.__get_orientation()
