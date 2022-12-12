@@ -44,7 +44,7 @@ class Compass:
         # TODO: Refactor for efficiency.
         for orientation_index in self.__orientations:
             if self.__orientations[orientation_index] == orientation:
-                self.__orientation_index == orientation_index
+                self.__orientation_index = orientation_index
 
     def get_orientation(self) -> str:
         """Gets the compass orientation."""
