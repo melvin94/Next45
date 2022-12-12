@@ -1,6 +1,6 @@
 from argparse import ArgumentParser
+from lib.rover import Rover
 from pathlib import Path
-from rover import Rover
 
 ap = ArgumentParser()
 ap.add_argument(
