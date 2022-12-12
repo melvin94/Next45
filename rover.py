@@ -157,4 +157,4 @@ class Rover:
             x, y = self.__rover_data.position
             orientation = self.__rover_data.orientation
 
-        return f'{x} {y} {orientation}'
+        return f'{x}{y} {orientation}'
