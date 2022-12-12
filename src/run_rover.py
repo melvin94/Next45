@@ -1,5 +1,5 @@
 from argparse import ArgumentParser
-from lib.rover import Rover
+from src.lib.rover import Rover
 from pathlib import Path
 
 ap = ArgumentParser()
@@ -11,7 +11,7 @@ ap.add_argument(
 )
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     args = ap.parse_args()
     input_path = Path(args.input_path)
 
