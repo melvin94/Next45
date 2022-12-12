@@ -1,5 +1,5 @@
-from compass import Compass
 from dataclasses import dataclass
+from src.lib.compass import Compass
 from pathlib import Path
 
 

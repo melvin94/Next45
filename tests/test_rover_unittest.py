@@ -1,5 +1,6 @@
 from os.path import join
-from rover import Rover
+from src.lib.rover import Rover
+
 
 import unittest
 
@@ -9,7 +10,7 @@ class TestRover(unittest.TestCase):
     Inherit unittest.TestCase
     """
 
-    input_directory = './inputs/'  # input directory for all test input cases
+    input_directory = 'data/inputs/'  # input directory for all input tests
 
     # test case: sample result
     def test_0_sample(self):
@@ -70,7 +71,3 @@ class TestRover(unittest.TestCase):
         test_rover = Rover(join(self.input_directory, 'input9.txt'))
         result = test_rover.process_instructions()
         self.assertEqual(result, '94 N')
-
-
-if __name__ == '__main__':
-    unittest.main()
