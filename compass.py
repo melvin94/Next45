@@ -19,17 +19,27 @@ class Compass:
                                 3: 'West'
                              }`
 
-                             Note: The index order follows a clockwise
-                             direction. For example, the orientation indexed as
-                             `1` is the next orientation following a clockwise
-                             direction from the orientation indexed as `0`.
+                             Note the following:
+
+                             - The indices must range from [0, N-1], where N is
+                             the total number of orientations.
+
+                             - The index order follows a clockwise direction.
+                             For example, the orientation indexed as `1` is the
+                             next orientation following a clockwise direction
+                             from the orientation indexed as `0`.
         """
 
         self.__orientations = orientations
         self.__orientation_index = None
 
-    def set_orientation(self, orientation: str) -> None:
-        """Sets the compass orientation from the given orientation."""
+    def calibrate_compass(self, orientation: str) -> None:
+        """Sets the compass orientation from the given orientation. This is
+        required before the compass can be used.
+
+        :param orientation: The user-provided starting orientation of the
+                            compass.
+        """
 
         # TODO: Refactor for efficiency.
         for orientation_index in self.__orientations:
