@@ -4,13 +4,13 @@ A basic implementation of a navigation system for a Mars Rover.
 # Project Setup 
 There are no package dependencies in this project, other than a requirement for Python 3. To run the scripts in this project:
 1. Open a console in this directory
-2. Run the main script:
+2. Run the code as packages from the root folder to get the imports working correctly:
     ```shell
-    python main.py --input-path "inputs/input0.txt"
+    python -m src.run_rover --input-path "data/inputs/input0.txt"
     ```
-3. Run the unittest script:
+3. Run the unittests the same way:
     ```shell
-    python test_rover_unittest.py
+    python -m unittest
     ```
 
 # Project Assumptions:
