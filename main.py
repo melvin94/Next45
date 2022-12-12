@@ -1,6 +1,20 @@
-import sys
-import rover
+from argparse import ArgumentParser
+from pathlib import Path
+from rover import Rover
+
+ap = ArgumentParser()
+ap.add_argument(
+    '-i',
+    '--input-path',
+    required=True,
+    help='The path to the input instructions text file.'
+)
+
 
 if __name__ == "__main__":
-	myRover = rover.Rover()
-	myRover.readInput(sys.argv[1])
+    args = ap.parse_args()
+    input_path = Path(args.input_path)
+
+    mars_rover = Rover(input_path)
+    rover_position = mars_rover.process_instructions()
+    print('The rover is located at:', rover_position)
